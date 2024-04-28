@@ -29,3 +29,4 @@ jobs:
         env:
           APP: "flask_test"
           REGISTRY: ${{ secrets.DOCKERHUB_USERNAME }}
+        run: make update_image
