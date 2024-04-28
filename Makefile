@@ -3,7 +3,7 @@ IMAGE_NAME := gl-flask-image
 DOCKER_LOGIN := rudychuk
 
 build:
-	docker build -t $(IMAGE_NAME):latest .
+	docker build -t $(DOCKER_LOGIN)/$(IMAGE_NAME):latest .
 
 run:
 	docker run -d --name $(CONTAINER_NAME) -p 8080:8080 $(IMAGE_NAME):latest
@@ -22,4 +22,11 @@ push:
 
 prospector:
 	prospector --profile=config/prospector.yaml
+
+test:
+	python -m unittest tests/test.py
+
+update_image:
+	make build
+	make push
 
