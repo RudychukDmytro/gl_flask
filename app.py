@@ -29,6 +29,10 @@ def proces_vote():
     db.session.commit()
     return 'Голос збережено!'
 
+@app.route('/hello', methods=['GET'])
+def hello():
+    return 'Hello!'
+
 
 if __name__ == '__main__':
     app.run(debug=True)
