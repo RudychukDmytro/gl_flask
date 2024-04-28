@@ -20,4 +20,6 @@ clean-image:
 push:
 	docker push $(DOCKER_LOGIN)/$(IMAGE_NAME):latest
 
+prospector:
+	prospector --profile=config/prospector.yaml
 

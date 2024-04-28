@@ -1,0 +1,10 @@
+.idea
+.idea/
+.vscode/
+.git
+.github
+.cache
+.venv
+.pytest_cache
+.mypy_cache
+__pycache__
