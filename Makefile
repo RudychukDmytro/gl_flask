@@ -23,3 +23,6 @@ push:
 prospector:
 	prospector --profile=config/prospector.yaml
 
+test:
+	python -m unittest tests/test.py 
+
